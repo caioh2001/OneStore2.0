@@ -1,0 +1,16 @@
+﻿@model RoupaListViewModel
+
+<div class="container">
+    <div class="row">
+
+        <h2 class="card-title">@Model.Categoria</h2>
+
+        @foreach (var roupa in Model.Roupas)
+        {
+            <partial name="_RoupaResumo" for="@roupa"/>
+
+            <br />
+            <br />
+        }
+    </div>
+</div>

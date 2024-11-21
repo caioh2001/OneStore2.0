@@ -1,0 +1,24 @@
+﻿@model Roupa
+
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="text-center">
+                    <p><img src="@Model.RoupaUrlImagem" class="img-fluid" /></p>
+            </div>
+
+            <div class="card-block">
+                <h2 class="card-title">@Model.RoupaNome</h2>
+                <p class="card-text">@Model.RoupaDescricao</p>
+
+                <p class="btn btn-group align-content-lg-end">
+                    <a asp-controller="Roupa" asp-action="List" class="btn btn-outline-info">Ver todas as roupas</a>
+                    <a class="btn btn-primary" id="cartButton" asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" 
+                    asp-route-roupaId="@Model.RoupaId">Incluir no carrinho</a>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div>

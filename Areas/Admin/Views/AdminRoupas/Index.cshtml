@@ -1,0 +1,74 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<OneStore.Models.Roupa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Roupas</h1>
+
+<form method="get" class="form-inline">
+    <input name="filter" class="form-control" placeholder="filtro" value="@Model.RouteValue["Filter"]" />
+    <button type="submit" class="btn btn-info">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Procurar
+    </button>
+</form>
+
+Total de roupas: @Model.TotalRecordCount
+
+<div>
+    <vc:pager paging-list="@Model"></vc:pager>
+</div>
+
+<p>
+    <a asp-action="Create">Adicionar roupa</a> |
+    <a asp-controller="AdminRoupasReport" asp-action="RoupasCategoriaReport">Gerar Relatório</a> |
+    <a asp-controller="AdminRoupasReport" asp-action="RoupasCategoriaPDF">Gerar PDF</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoupaNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoupaPreco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoupaDestaque)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmEstoque)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoupaNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoupaPreco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoupaDestaque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmEstoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RoupaId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.RoupaId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.RoupaId">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

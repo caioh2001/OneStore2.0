@@ -1,0 +1,42 @@
+﻿@model OneStore.ViewModels.PedidoRoupaViewModel
+
+@{
+    ViewData["Title"] = "PedidoRoupas";
+    double totalPedido = 0;
+}
+
+<h1>Produtos do pedido</h1>
+<hr />
+<h3>Pedido: @Html.DisplayFor(model => Model.Pedido.PedidoId)</h3>
+<h3>Cliente: @Html.DisplayFor(model => Model.Pedido.Nome)</h3>
+<h3>Data: @Html.DisplayFor(model => Model.Pedido.PedidoEnviado)</h3>
+<h3>Entrega: @Html.DisplayFor(model => Model.Pedido.PedidoEntregueEm)</h3>
+
+<table>
+    @foreach(var item in Model.Pedido.PedidoItens)
+    {
+        totalPedido += (item.Roupa.RoupaPreco * item.Quantidade);
+
+        <tr>
+            <td align="right">
+                <h3>@Html.DisplayFor(modelItem => item.Roupa.RoupaNome)</h3>
+            </td>
+            <td align="right">
+                <img src="@item.Roupa.RoupaUrlImagem" class="img-fluid" height="100" width="100">
+            </td>
+            <td align="right">
+                <h3>@string.Format("{0:C}", item.Roupa.RoupaPreco)</h3>
+            </td>
+            <td align="right">
+                <h3>@Html.DisplayFor(modelItem => item.Quantidade)</h3>
+            </td>
+        </tr>
+    }
+
+    <tr>
+        <td colspan="2">&nbsp;</td>
+        <td align="right"><h3>Total: @string.Format("{0:C}", totalPedido)</h3></td>
+    </tr>
+</table>
+
+<a asp-action="Index" class="btn btn-outline-info">Retornar</a>

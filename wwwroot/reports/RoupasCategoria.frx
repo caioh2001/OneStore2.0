@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/01/2023 10:15:17" ReportInfo.Modified="08/01/2023 10:36:30" ReportInfo.CreatorVersion="2023.2.0.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqM7gJFg/iaLrqMhRfGy5lGlRctRRDi9zQ5Zvnynk/nXQVkOfanu2cBrmluK0udx8P2L4NWWBbL295SNlAv+Tim8ddlUDCVzxNQssRNjVtY0PQY/zq/MfdsI8zTwzpb4pH7454fpF6Po/0kFkUt5AaBGlwfjCrtPnF+CMBOpRlb/S4/toeySaxF+tMh4+hh1/3kVUEmoUYJN/79UYC/PxY3g==">
+      <TableDataSource Name="T_CATEGORIA" DataType="System.Int32" Enabled="true" TableName="T_CATEGORIA">
+        <Column Name="CategoriaId" DataType="System.Int32"/>
+        <Column Name="CategoriaNome" DataType="System.String"/>
+        <Column Name="CategoriaDescricao" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="T_ROUPA" DataType="System.Int32" Enabled="true" TableName="T_ROUPA">
+        <Column Name="RoupaId" DataType="System.Int32"/>
+        <Column Name="RoupaNome" DataType="System.String"/>
+        <Column Name="RoupaDescricao" DataType="System.String"/>
+        <Column Name="RoupaPreco" DataType="System.Decimal"/>
+        <Column Name="RoupaUrlImagem" DataType="System.String"/>
+        <Column Name="RoupaDestaque" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="EmEstoque" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="CategoriaId" DataType="System.Int32"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Relation Name="T_CATEGORIA_T_ROUPA" ParentDataSource="T_CATEGORIA" ChildDataSource="T_ROUPA" ParentColumns="CategoriaId" ChildColumns="CategoriaId" Enabled="true"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text9" Top="9.45" Width="718.2" Height="18.9" Text="Roupas por categoria" Font="Arial, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="41.8" Width="718.2" Height="28.35" Fill.Color="Cyan" DataSource="T_CATEGORIA">
+      <TextObject Name="Text1" Width="217.35" Height="18.9" Text="[T_CATEGORIA.CategoriaNome]" Font="Arial, 10pt"/>
+      <TextObject Name="Text2" Left="226.8" Width="236.25" Height="18.9" Text="[T_CATEGORIA.CategoriaDescricao]" Font="Arial, 10pt"/>
+      <DataBand Name="Data2" Top="74.15" Width="718.2" Height="18.9" DataSource="T_ROUPA">
+        <TextObject Name="Text3" Width="217.35" Height="18.9" Text="[T_ROUPA.RoupaNome]" Font="Arial, 10pt"/>
+        <TextObject Name="Text5" Left="226.8" Width="236.25" Height="18.9" Text="[T_ROUPA.RoupaDescricao]" Font="Arial, 10pt"/>
+        <TextObject Name="Text7" Left="472.5" Width="170.1" Height="18.9" Text="[T_ROUPA.RoupaPreco]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      </DataBand>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="97.05" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

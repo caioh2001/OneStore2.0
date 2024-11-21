@@ -1,0 +1,51 @@
+﻿@model CarrinhoCompraViewModel
+
+<div class="Container">
+    <div class="row">
+        <div>
+           <h4> Seu carrinho de compras: </h4> 
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Quantidade</th>
+                    <th>Roupa</th>
+                    <th class="text-right">Preço</th>
+                    <th class="text-right">Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var item in Model.CarrinhoCompra.CarrinhoCompraItens)
+                {
+                    <tr>
+                        <td class="text-center">@item.Quantidade</td>
+                        <td class="text-left">@item.Roupa.RoupaNome</td>
+                        <td class="text-right">@item.Roupa.RoupaPreco.ToString("c")</td>
+                        <td class="text-right">@((item.Roupa.RoupaPreco * @item.Quantidade).ToString("c"))</td>
+
+                        <td>
+                        <a class="btn btn-danger" style="width:90;height:10" asp-controller="CarrinhoCompra" asp-action="RemoverItemDoCarrinhoCompra" asp-route-roupaId="@item.Roupa.RoupaId">Remover</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">Total:</td>
+                    <td class="text-right"> @Model.CarrinhoCompraTotal.ToString("c") </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="text-right">
+            <div class="btn-group">
+                <a class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar pedido</a>
+                <a class="btn btn-primary" asp-controller="Roupa" asp-action="List">Continuar comprando</a>
+            </div>
+        </div>
+    </div>
+</div>
