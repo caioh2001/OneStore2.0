@@ -26,7 +26,13 @@
                     </tr>
                 }
             </table>
-            <h4>Valor total do pedido: <strong>@((ViewBag.TotalPedido).ToString("C2"))</strong></h4>
+            <div style="text-align: center;">
+                <h4>Valor total do pedido: <strong>@((ViewBag.TotalPedido).ToString("C2"))</strong></h4>
+                <p/>
+                    <img src="~/images/QRCodePix.png" />
+                <p/>                
+                <h4>Seu pedido será enviado assim que o pagamento for confirmado!</h4>
+            </div>
         </div>
     </div>
 </div>

@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projetos\\One Store\\OneStore\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Projetos\\OneStore2.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C95AFA9-0D70-4B7E-9BE2-46C058AFF7CA}|OneStore.csproj|c:\\projetos\\onestore2.0\\areas\\admin\\views\\adminroupas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C95AFA9-0D70-4B7E-9BE2-46C058AFF7CA}|OneStore.csproj|solutionrelative:areas\\admin\\views\\adminroupas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +43,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\OneStore2.0\\Areas\\Admin\\Views\\AdminRoupas\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminRoupas\\Create.cshtml",
+              "ToolTip": "C:\\Projetos\\OneStore2.0\\Areas\\Admin\\Views\\AdminRoupas\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminRoupas\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T23:43:48.928Z",
+              "EditorCaption": ""
             }
           ]
         }

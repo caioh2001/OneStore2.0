@@ -12433,11 +12433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\One Store\\OneStore\\OneStore.csproj",
+      "projectUniqueName": "C:\\Projetos\\OneStore2.0\\OneStore.csproj",
       "projectName": "OneStore",
-      "projectPath": "C:\\Projetos\\One Store\\OneStore\\OneStore.csproj",
+      "projectPath": "C:\\Projetos\\OneStore2.0\\OneStore.csproj",
       "packagesPath": "C:\\Users\\Caio\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\One Store\\OneStore\\obj\\",
+      "outputPath": "C:\\Projetos\\OneStore2.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

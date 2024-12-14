@@ -4,9 +4,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Adicionar roupa</h1>
 
-<h4>Roupa</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -32,6 +31,7 @@
                 <input asp-for="RoupaUrlImagem" class="form-control" />
                 <span asp-validation-for="RoupaUrlImagem" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="RoupaDestaque" /> @Html.DisplayNameFor(model => model.RoupaDestaque)
@@ -42,18 +42,19 @@
                     <input class="form-check-input" asp-for="EmEstoque" /> @Html.DisplayNameFor(model => model.EmEstoque)
                 </label>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="CategoriaId" class="control-label"></label>
                 <select asp-for="CategoriaId" class ="form-control" asp-items="ViewBag.CategoriaId"></select>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Adicionar ao estoque" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar a tela anterior</a>
 </div>
-

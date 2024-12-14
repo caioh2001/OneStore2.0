@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BJ51UGso1f0=",
+  "dgSpecHash": "D3o3QPmic0k=",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\One Store\\OneStore\\OneStore.csproj",
+  "projectFilePath": "C:\\Projetos\\OneStore2.0\\OneStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Caio\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Caio\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
